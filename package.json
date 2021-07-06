@@ -2,13 +2,10 @@
   "name": "test-react-ssr",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npm-run-all --parallel dev:build:* dev:server",
-    "dev:server": "nodemon --inspect build/bundle.js",
-    "dev:build:server": "webpack --mode development --config webpack.server.js --watch",
-    "dev:build:client": "webpack --mode development --config webpack.client.js --watch",
-    "dev:static": "npm-run-all --parallel dev:static:build dev:static:server",
-    "dev:static:server": "nodemon --inspect server.js",
-    "dev:static:build": "webpack --mode development --config webpack.client.static.js --watch"
+    "prod:build:client": "webpack --mode production --config webpack.client.js",
+    "prod:build:server": "webpack --mode production --config webpack.server.js",
+    "test:client": "start ./index.html",
+    "test:server": "node ./public/bundle-server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -21,9 +18,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
-    "nodemon": "^2.0.4",
-    "npm-run-all": "^4.1.5",
-    "webpack": "^4.43.0",
+    "webpack": "^5.42.1",
     "webpack-cli": "^3.3.12",
     "webpack-node-externals": "^1.7.2"
   }

@@ -1,4 +1,7 @@
-关于服务端渲染的一些尝试，方案梳理如下：
+基础版的 react 服务端渲染  
+https://forever-z.cn/#/./articles/study/study-react-ssr
 
-* 实时的服务端渲染，主要打包 server 端，同时解析 jsx
-* 预打包的服务端渲染，主要打包 client 端，server 只做简单路由
+```
+npm i
+npm run prod:build:server && test:server
+```
